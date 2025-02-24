@@ -1,6 +1,10 @@
-@BlukOperationDapper_HostAddress = http://localhost:5112
+@BlukOperationDapper_HostAddress = https://localhost:7239
 
 GET {{BlukOperationDapper_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+GET {{BlukOperationDapper_HostAddress}}/api/person/bulk-person
 
 ###

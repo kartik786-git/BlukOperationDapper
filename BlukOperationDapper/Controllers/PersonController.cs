@@ -36,5 +36,13 @@ namespace BlukOperationDapper.Controllers
             await _personService.BulkDeleteAsync(ids);
             return Ok("Bulk delete successful");
         }
+
+        [HttpGet("GetAllPerson")]
+        public async Task<IActionResult> GetAllPerson([FromBody] SearchCriteria searchCriteria)
+        {
+            var persons = await _personService.GetAllPersons(searchCriteria.Ids, searchCriteria.Names, searchCriteria.isActive);
+            return Ok(persons);
+        }
+
     }
 }
